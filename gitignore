@@ -1,0 +1,41 @@
+# ROS 2 build artefacts (must not be committed)
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Notebooks (uncomment if you don't want to commit notebook outputs)
+# *.ipynb
+
+# Bag files (large; use Git LFS or remove from tracking)
+# Uncomment the next line if NOT using Git LFS for bags:
+# *.db3
+# *.mcap
+# bags/*/*.yaml
+
+# Misc
+*.log
