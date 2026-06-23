@@ -1,0 +1,13 @@
+# Python dependencies for the analysis scripts in analysis/.
+#
+# These are the only pip-installable dependencies.  The ROS 2 client
+# libraries (rclpy, rosbag2_py) are NOT installed via pip; they are
+# provided by your ROS 2 Humble installation and are picked up after
+# sourcing the ROS 2 environment:
+#     source /opt/ros/humble/setup.bash
+#
+# Versions below are the versions used during the thesis work.  Newer
+# minor versions are expected to work.
+
+numpy>=1.21
+matplotlib>=3.5
