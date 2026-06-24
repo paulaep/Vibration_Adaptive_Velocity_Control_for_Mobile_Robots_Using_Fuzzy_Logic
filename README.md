@@ -139,7 +139,7 @@ archived on Zenodo as a separate dataset:
 
 > Estepa Pérez, P. (2026). *Vibration-Adaptive Velocity Control for Mobile
 > Robots Using Fuzzy Logic: Experimental Bag Files.* Zenodo.
-> [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)
+> [https://doi.org/10.5281/zenodo.20826273]
 
 The dataset contains nine bag folders, each recorded on 19 May 2026,
 covering three experimental conditions with three repetitions each:
