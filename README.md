@@ -4,6 +4,16 @@ This repository contains the source code, launch configuration, and recorded exp
 
 The system implements a shared-control teleoperation architecture in which a human operator commands the trajectory of an iRobot Create 3 mobile robot through a PS4 wireless game controller, and a Mamdani fuzzy logic controller modulates the magnitude of the commanded velocity in response to vibration measured by an onboard MPU-9250 inertial measurement unit. The architectural and methodological details are documented in the thesis; this repository documents the implementation only.
 
+## Thesis
+
+The full thesis is available from the University of Turku's institutional
+repository:
+
+> Estepa Pérez, P. (2026). *Vibration-Adaptive Velocity Control for Mobile
+> Robots Using Fuzzy Logic: Online IMU-Based Approach.* MSc thesis,
+> University of Turku.
+> 
+
 ## System overview
 
 The system is distributed across three hosts communicating over ROS 2 Humble with CycloneDDS:
@@ -49,6 +59,7 @@ The four custom ROS 2 nodes and their topic interfaces are summarised below; eac
 │       └── setup.py
 ├── bags/                   (recorded experimental data; nine runs)
 ├── analysis/               (Python scripts used to generate the figures of Chapter 5)
+├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
@@ -123,9 +134,22 @@ To record a bag during the run, add `record_bag:=true bag_name:=<your_name>` to 
 
 ## Experimental data
 
-The `bags/` directory contains the recorded ROS 2 bag files for the nine experimental runs reported in Chapter 5 of the thesis. Each bag is named `<condition>_<repetition>` (for example, `fuzzy_on_01`, `fuzzy_off_03`).
+The nine recorded ROS 2 bag files reported in Chapter 5 of the thesis are
+archived on Zenodo as a separate dataset:
 
-Bag files are stored using Git LFS due to their size. To access them after cloning, install Git LFS and run `git lfs pull`.
+> Estepa Pérez, P. (2026). *Vibration-Adaptive Velocity Control for Mobile
+> Robots Using Fuzzy Logic: Experimental Bag Files.* Zenodo.
+> [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)
+
+The dataset contains nine bag folders, each recorded on 19 May 2026,
+covering three experimental conditions with three repetitions each:
+
+- `20260519_thesis_disturbance_fuzzy_on_01` through `_03`         — fuzzy-ON, linear motion
+- `20260519_thesis_disturbance_fuzzy_off_01` through `_03`        — fuzzy-OFF, linear motion
+- `20260519_thesis_disturbance_angular_fuzzy_on_01` through `_03` — fuzzy-ON, angular motion
+
+To use the analysis scripts in `analysis/`, download the archive from Zenodo and extract the nine bag folders into the `bags/` directory of
+this repository.
 
 ## Reproducibility notes
 
